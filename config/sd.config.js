@@ -27,6 +27,18 @@ module.exports = {
           format: 'scss/variables',
         },
       ],
+    },
+    js: {
+      transformGroup: 'js',
+      prefix: 'token',
+      transforms: ['name/cti/constant'],
+      buildPath: 'dist/js/',
+      files: [
+        {
+          format: 'javascript/es6',
+          destination: 'style-variables.js',
+        },
+      ]
     }
   }
 }
