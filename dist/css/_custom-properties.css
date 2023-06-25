@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 25 Jun 2023 12:16:32 GMT
+ * Generated on Sun, 25 Jun 2023 12:24:26 GMT
  */
 
 :root {
@@ -366,7 +366,7 @@
   --token-line-height-100: 1.5; /* Default line height */
   --token-line-height-200: 1.625;
   --token-line-height-300: 1.8;
-  --token-size-spacing: 8px;
+  --token-size-spacing: 8px; /* 8-point grid */
   --token-size-golden-ratio-70: 23.6%;
   --token-size-golden-ratio-80: 38.2%;
   --token-size-golden-ratio-90: 50%;

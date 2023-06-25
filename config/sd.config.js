@@ -15,6 +15,18 @@ module.exports = {
           format: 'css/variables',
         },
       ],
+    },
+    scss: {
+      transformGroup: 'scss',
+      prefix: 'token',
+      transforms: ['name/cti/kebab', 'color/rgb'],
+      buildPath: 'dist/scss/',
+      files: [
+        {
+          destination: '_custom-properties.scss',
+          format: 'scss/variables',
+        },
+      ],
     }
   }
 }
