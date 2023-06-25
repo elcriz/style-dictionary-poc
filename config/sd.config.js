@@ -23,7 +23,7 @@ module.exports = {
       buildPath: 'dist/scss/',
       files: [
         {
-          destination: '_custom-properties.scss',
+          destination: '_variables.scss',
           format: 'scss/variables',
         },
       ],
