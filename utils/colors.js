@@ -29,16 +29,16 @@ function getRanges(value) {
     '1000': { value: Color(value).darken(45).toRgbString() },
   };
 
-  // Remove redundant duplicates
+  // Remove redundant values
   return Object.keys(ranges)
     .reverse()
     .reduce((previous, current) => {
       const isExisting = Object.keys(previous)
         .findIndex(value => ranges[value].value === ranges[current].value) !== -1;
-      if (isExisting) {
-        return previous;
+      if (!isExisting) {
+        return { ...previous, [current]: ranges[current] };
       }
-      return { ...previous, [current]: ranges[current] };
+      return previous;
     }, {});
 }
 
