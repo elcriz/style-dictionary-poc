@@ -1,0 +1,14 @@
+{
+  "name": "aws-style-dictionary-poc",
+  "version": "1.0.0",
+  "description": "A personal tryout for AWS Style Dictionary",
+  "scripts": {
+    "build": "style-dictionary build --config ./config/sd.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "style-dictionary": "^3.8.0",
+    "tinycolor2": "^1.6.0"
+  }
+}
