@@ -1,5 +1,6 @@
 const { getRanges } = require('../utils/colors');
 
+// Base color palette (never use these directly)
 const baseColors = {
   white: { r: 255, g: 255, b: 255 },
   brown: { r: 39, g: 35, b: 34} ,
@@ -9,32 +10,39 @@ const baseColors = {
   blue: { r: 26, g: 55, b: 68 },
   green: { r: 106, g: 162, b: 80 },
   beige: { r: 252, g: 229, b: 180 },
-  grey: { r: 93, g: 113, b: 13 },
+  grey: { r: 93, g: 113, b: 131 },
 };
 
+const base = Object
+  .keys(baseColors)
+  .reduce((previous, color) => ({
+    ...previous, [color]: getRanges(baseColors[color])
+  }), {});
+
 module.exports = {
-  base: Object
-    .keys(baseColors)
-    .reduce((previous, color) => ({
-      ...previous, [color]: getRanges(color)
-    }), {}),
-  hierarchical: {
-    primary: getRanges(baseColors.green.value),
-    secondary: getRanges(baseColors.beige.value),
-    tertiary: getRanges(baseColors.blue.value),
-  },
-  typography: {
-    heading: getRanges(baseColors.brown.value),
-    'sub-heading': getRanges(baseColors.brown.value),
-    text: getRanges(baseColors.brown.value),
-    'text-inversed': getRanges(baseColors.white.value),
-  },
-  ui: getRanges(baseColors.grey.value),
-  states: {
-    error: getRanges(baseColors.red.value),
-    success: getRanges(baseColors.green.value),
-    warning: getRanges(baseColors.orange.value),
-    select: getRanges(baseColors.brown.value),
-    focus: getRanges(baseColors.orange.value),
+  color: {
+    // Descriptive colors (never use these directly)
+    ...base,
+
+    // Hierarchical colors
+    primary: getRanges(base.green[100].value),
+    secondary: getRanges(base.beige[100].value),
+    tertiary: getRanges(base.blue[100].value),
+
+    // Typography colors
+    heading: getRanges(base.brown[100].value),
+    'sub-heading': getRanges(base.brown[100].value),
+    text: getRanges(base.brown[100].value),
+    'text-inversed': getRanges(base.white[100].value),
+
+    // User interface colors
+    ui: getRanges(base.grey[100].value),
+
+    // State colors
+    error: getRanges(base.red[100].value),
+    success: getRanges(base.green[100].value),
+    warning: getRanges(base.orange[100].value),
+    select: getRanges(base.brown[100].value),
+    focus: getRanges(base.orange[100].value),
   }
 };

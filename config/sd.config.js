@@ -1,22 +1,16 @@
 module.exports = {
-  source: ['tokens/**/*.json'],
+  source: [
+    'tokens/**/*.json',
+    'tokens/**/*.js',
+  ],
   platforms: {
-    scss: {
-      transformGroup: 'scss',
-      buildPath: 'build.scss',
-      files: [
-        {
-          destination: '_variables.scss',
-          format: 'scss/variables',
-        },
-      ],
-    },
     css: {
       transformGroup: 'css',
-      buildPath: 'build.css',
+      transforms: ['name/cti/kebab', 'color/rgb'],
+      buildPath: 'build/css/',
       files: [
         {
-          destination: '_variables.css',
+          destination: '_custom-properties.css',
           format: 'css/variables',
         },
       ],
