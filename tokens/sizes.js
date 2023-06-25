@@ -1,7 +1,7 @@
 module.exports = {
   size: {
     // Layout spacing
-    spacing: { value: '8px' }, // 8-point grid
+    spacing: { value: '8px', comment: '8-point grid' },
 
     // Golden ratio
     'golden-ratio-70': { value: '23.6%' },

@@ -6,6 +6,7 @@ module.exports = {
   platforms: {
     css: {
       transformGroup: 'css',
+      prefix: 'token',
       transforms: ['name/cti/kebab', 'color/rgb'],
       buildPath: 'dist/css/',
       files: [

@@ -1,6 +1,6 @@
 const Color = require('tinycolor2');
 
-function getRanges(value) {
+function getRanges(value, comment = {}) {
   const ranges = {
 
     // Lighter colors
