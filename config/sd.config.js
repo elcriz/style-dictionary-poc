@@ -7,7 +7,7 @@ module.exports = {
     css: {
       transformGroup: 'css',
       transforms: ['name/cti/kebab', 'color/rgb'],
-      buildPath: 'build/css/',
+      buildPath: 'dist/css/',
       files: [
         {
           destination: '_custom-properties.css',
