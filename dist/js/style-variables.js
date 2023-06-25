@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Sun, 25 Jun 2023 12:49:20 GMT
+ * Generated on Sun, 25 Jun 2023 12:51:10 GMT
  */
 
 export const TOKEN_COLOR_WHITE_100 = "rgb(255, 255, 255)";

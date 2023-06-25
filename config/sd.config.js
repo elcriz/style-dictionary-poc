@@ -38,6 +38,10 @@ module.exports = {
           format: 'javascript/es6',
           destination: 'style-variables.js',
         },
+        {
+          format: 'typescript/es6-declarations',
+          destination: 'style-variables.d.ts',
+        }
       ]
     }
   }
